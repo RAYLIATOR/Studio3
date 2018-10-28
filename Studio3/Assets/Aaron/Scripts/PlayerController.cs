@@ -1,18 +1,33 @@
-﻿using System.Collections;
+﻿using Photon.Pun;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    PhotonView pv;
+    PlayersManager pM;
 
-	void Start ()
+    void Start ()
     {
-        transform.Rotate(0, 90, 0);
+        pv = GetComponent<PhotonView>();
+        pM = FindObjectOfType<PlayersManager>();
+        if (pM.id == 1)
+        {
+            transform.Rotate(0, 90, 0);
+        }
+        else if (pM.id == 2)
+        {
+            transform.Rotate(0, -90, 0);
+        }
 	}
 	
 	void Update ()
     {
-        MovePlayer();
+        if(pv.IsMine)
+        {
+            MovePlayer();
+        }
 	}
 
     void MovePlayer()

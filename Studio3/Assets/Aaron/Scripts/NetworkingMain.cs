@@ -34,7 +34,7 @@ public class NetworkingMain : MonoBehaviourPunCallbacks
     public override void OnConnectedToMaster()
     {
         Debug.Log("Successfully connected to server.");
-        PhotonNetwork.JoinRandomRoom();
+        PhotonNetwork.JoinRandomRoom(null, 0);
     }
 
     public override void OnJoinRandomFailed(short returnCode, string message)
