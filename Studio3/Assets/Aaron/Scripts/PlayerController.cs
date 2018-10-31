@@ -2,11 +2,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
     PhotonView pv;
     PlayersManager pM;
+    float health;
+    Image healthBar;
 
     void Start ()
     {
@@ -15,11 +18,14 @@ public class PlayerController : MonoBehaviour
         if (pM.id == 1)
         {
             transform.Rotate(0, 90, 0);
+            healthBar = GameObject.FindGameObjectWithTag("hb1").GetComponent<Image>();
         }
         else if (pM.id == 2)
         {
             transform.Rotate(0, -90, 0);
+            healthBar = GameObject.FindGameObjectWithTag("hb2").GetComponent<Image>();
         }
+        health = 100;
 	}
 	
 	void Update ()
@@ -28,7 +34,24 @@ public class PlayerController : MonoBehaviour
         {
             MovePlayer();
         }
+        healthBar.fillAmount = health / 100;
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            health -= 10;
+        }
 	}
+
+    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    {
+        if(stream.IsWriting)
+        {
+            stream.Serialize(ref health);
+        }
+        else
+        {
+            stream.Serialize(ref health);
+        }
+    }
 
     void MovePlayer()
     {
