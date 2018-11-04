@@ -699,7 +699,7 @@ MonoBehaviour:
   m_FillMethod: 0
   m_FillAmount: 1
   m_FillClockwise: 1
-  m_FillOrigin: 0
+  m_FillOrigin: 1
 --- !u!222 &816727766
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1130,7 +1130,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 022b214f61887e64e9c97132460e5e6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputField: {fileID: 0}
+  userInputField: {fileID: 0}
+  roomInputField: {fileID: 0}
 --- !u!4 &1422588720
 Transform:
   m_ObjectHideFlags: 0

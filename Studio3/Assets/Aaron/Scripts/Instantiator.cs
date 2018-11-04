@@ -21,7 +21,19 @@ public class Instantiator : MonoBehaviour
             else if(pM.color == 2)
             {
                 PhotonNetwork.Instantiate(redPlayer.name, new Vector3(-2, 0, -6.5f), Quaternion.identity);
-            }            
+            }
+            else
+            {
+                int i = Random.Range(1, 3);
+                if (i == 1)
+                {
+                    PhotonNetwork.Instantiate(bluePlayer.name, new Vector3(-2, 0, -6.5f), Quaternion.identity);
+                }
+                else if (i == 2)
+                {
+                    PhotonNetwork.Instantiate(redPlayer.name, new Vector3(-2, 0, -6.5f), Quaternion.identity);
+                }
+            }
         }
         else if (pM.id == 2)
         {
@@ -32,6 +44,18 @@ public class Instantiator : MonoBehaviour
             else if (pM.color == 2)
             {
                 PhotonNetwork.Instantiate(redPlayer.name, new Vector3(2, 0, -6.5f), Quaternion.identity);
+            }
+            else
+            {
+                int i = Random.Range(1, 3);
+                if (i == 1)
+                {
+                    PhotonNetwork.Instantiate(bluePlayer.name, new Vector3(2, 0, -6.5f), Quaternion.identity);
+                }
+                else if (i == 2)
+                {
+                    PhotonNetwork.Instantiate(redPlayer.name, new Vector3(2, 0, -6.5f), Quaternion.identity);
+                }
             }
         }
     }
