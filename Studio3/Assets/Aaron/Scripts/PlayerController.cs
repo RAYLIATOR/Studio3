@@ -4,12 +4,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : MonoBehaviour, IPunObservable
 {
     PhotonView pv;
     PlayersManager pM;
     float health;
-    Image healthBar;
+    float enemyHealth;
+    Image myHealthBar;
+    Image enemyHealthBar;
 
     void Start ()
     {
@@ -18,27 +20,33 @@ public class PlayerController : MonoBehaviour
         if (pM.id == 1)
         {
             transform.Rotate(0, 90, 0);
-            healthBar = GameObject.FindGameObjectWithTag("hb1").GetComponent<Image>();
+            myHealthBar = GameObject.FindGameObjectWithTag("hb1").GetComponent<Image>();
+            enemyHealthBar = GameObject.FindGameObjectWithTag("hb2").GetComponent<Image>();
         }
         else if (pM.id == 2)
         {
             transform.Rotate(0, -90, 0);
-            healthBar = GameObject.FindGameObjectWithTag("hb2").GetComponent<Image>();
+            myHealthBar = GameObject.FindGameObjectWithTag("hb2").GetComponent<Image>();
+            enemyHealthBar = GameObject.FindGameObjectWithTag("hb1").GetComponent<Image>();
         }
         health = 100;
 	}
 	
 	void Update ()
     {
-        if(pv.IsMine)
+        if (pv.IsMine)
         {
             MovePlayer();
+            myHealthBar.fillAmount = health / 100;
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                health -= 10;
+            }
         }
-        healthBar.fillAmount = health / 100;
-        if(Input.GetKeyDown(KeyCode.Space))
+        else
         {
-            health -= 10;
-        }
+            enemyHealthBar.fillAmount = enemyHealth / 100;
+        } 
 	}
 
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
@@ -49,7 +57,7 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            stream.Serialize(ref health);
+             stream.Serialize(ref enemyHealth);
         }
     }
 

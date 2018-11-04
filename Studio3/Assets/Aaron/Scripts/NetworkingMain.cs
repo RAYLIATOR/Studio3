@@ -7,8 +7,10 @@ using UnityEngine.UI;
 
 public class NetworkingMain : MonoBehaviourPunCallbacks
 {
-    public InputField inputField;
+    public InputField userInputField;
+    public InputField roomInputField;
     PlayersManager pM;
+    string roomName;
     
     void Start()
     {
@@ -48,8 +50,15 @@ public class NetworkingMain : MonoBehaviourPunCallbacks
         typedLobby.Name = "Lobby 1";
         typedLobby.Type = LobbyType.Default;
 
-        PhotonNetwork.CreateRoom("Room 147", roomOptions, typedLobby);
-        //PhotonNetwork.JoinRoom("Room 16");
+        roomName = roomInputField.text;
+        PhotonNetwork.CreateRoom(roomName, roomOptions, typedLobby);
+    }
+
+    public override void OnCreateRoomFailed(short returnCode, string message)
+    {
+        base.OnCreateRoomFailed(returnCode, message);
+        PhotonNetwork.JoinRoom(roomName);
+
     }
 
     public override void OnCreatedRoom()
@@ -112,7 +121,7 @@ public class NetworkingMain : MonoBehaviourPunCallbacks
 
     public void ConnectToServer()
     {
-        PhotonNetwork.NickName = inputField.text;
+        PhotonNetwork.NickName = userInputField.text;
         PhotonNetwork.ConnectUsingSettings();
     }
 

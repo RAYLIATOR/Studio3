@@ -182,3 +182,4 @@ D:\Studio3 Repository\Studio3\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs
 D:\Studio3 Repository\Studio3\obj\Debug\Assembly-CSharp.csproj.CopyComplete
 D:\Studio3 Repository\Studio3\obj\Debug\Assembly-CSharp.dll
 D:\Studio3 Repository\Studio3\obj\Debug\Assembly-CSharp.pdb
+D:\Studio3 Repository\Studio3\Temp\bin\Debug\UnityEditor.StandardEvents.dll
