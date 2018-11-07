@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Instantiator : MonoBehaviour
 {
+    public GameObject waitingPanel;
     public GameObject bluePlayer;
     public GameObject redPlayer;
     PlayersManager pM;
@@ -37,6 +38,7 @@ public class Instantiator : MonoBehaviour
         }
         else if (pM.id == 2)
         {
+            waitingPanel.SetActive(false);
             if (pM.color == 1)
             {
                 PhotonNetwork.Instantiate(bluePlayer.name, new Vector3(2, 0, -6.5f), Quaternion.identity);
