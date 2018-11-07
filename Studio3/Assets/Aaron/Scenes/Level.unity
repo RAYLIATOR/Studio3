@@ -212,7 +212,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.54145765, y: 0.8794123}
   m_AnchorMax: {x: 0.97239333, y: 0.94500005}
-  m_AnchoredPosition: {x: -4.699997, y: 0.19999981}
+  m_AnchoredPosition: {x: -4.700012, y: 0.2000122}
   m_SizeDelta: {x: 5.399994, y: 17.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &55802234
@@ -380,7 +380,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.02173414, y: 0.8637204}
   m_AnchorMax: {x: 0.47927657, y: 0.95785314}
-  m_AnchoredPosition: {x: 2, y: 1.8000002}
+  m_AnchoredPosition: {x: 2, y: 1.8000183}
   m_SizeDelta: {x: -0.80000305, y: -4.3999996}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &265868201
@@ -671,7 +671,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.546447, y: 0.8794123}
   m_AnchorMax: {x: 0.96669126, y: 0.94500005}
-  m_AnchoredPosition: {x: -4.199997, y: 0.19999981}
+  m_AnchoredPosition: {x: -4.1999817, y: 0.2000122}
   m_SizeDelta: {x: 0.6000061, y: 4.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &816727765
@@ -877,6 +877,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1046769052}
   - component: {fileID: 1046769053}
+  - component: {fileID: 1046769054}
   m_Layer: 0
   m_Name: Instantiator
   m_TagString: Untagged
@@ -911,6 +912,27 @@ MonoBehaviour:
   waitingPanel: {fileID: 1840506930}
   bluePlayer: {fileID: 1384785880726594, guid: f937b8aeaedd5d048960043d5a873b00, type: 2}
   redPlayer: {fileID: 1929455375288148, guid: 2411c1b14386ce64691efa65fe2cae0b, type: 2}
+--- !u!114 &1046769054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1046769051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  ObservedComponents:
+  - {fileID: 1046769053}
+  viewIdField: 1
+  InstantiationId: 1
+  isRuntimeInstantiated: 0
 --- !u!1 &1197276363
 GameObject:
   m_ObjectHideFlags: 0
@@ -1292,7 +1314,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.02672345, y: 0.8794123}
   m_AnchorMax: {x: 0.47357452, y: 0.94500005}
-  m_AnchoredPosition: {x: 2.5, y: 0.8000002}
+  m_AnchoredPosition: {x: 2.5, y: 0.7999878}
   m_SizeDelta: {x: -6.399994, y: 2.3999996}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1891563395
