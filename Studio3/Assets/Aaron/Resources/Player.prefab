@@ -782,7 +782,7 @@ MonoBehaviour:
   - {fileID: 114034272088395450}
   - {fileID: 114226285208549060}
   viewIdField: 0
-  InstantiationId: 1
+  InstantiationId: 2
   isRuntimeInstantiated: 0
 --- !u!114 &114771295047771746
 MonoBehaviour:
@@ -813,7 +813,7 @@ SkinnedMeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 1e1c9a1deae9a6b46afd13d6beef18db, type: 2}
+  - {fileID: 2100000, guid: 0c51abaab14614945a9d4f3c5ca5ac7f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Instantiator : MonoBehaviourPun, IPunObservable
 {
+    public GameObject victoryPanel;
     public GameObject waitingPanel;
     public GameObject bluePlayer;
     public GameObject redPlayer;
@@ -77,6 +78,5 @@ public class Instantiator : MonoBehaviourPun, IPunObservable
 
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
     {
-        throw new System.NotImplementedException();
     }
 }
