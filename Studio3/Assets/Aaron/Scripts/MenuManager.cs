@@ -8,6 +8,7 @@ public class MenuManager : MonoBehaviour
     public GameObject mainMenuPanel;
     public GameObject characterSelectPanel;
     public GameObject pauseMenuPanel;
+    public GameObject youWinPanel;
     int mainMenuScene;
     int levelScene;
     bool paused;
@@ -39,6 +40,11 @@ public class MenuManager : MonoBehaviour
         pauseMenuPanel.SetActive(true);
     }
 
+    public void YouWin()
+    {
+        youWinPanel.SetActive(true);
+    }
+
     void Resume()
     {
         pauseMenuPanel.SetActive(false);
@@ -64,5 +70,11 @@ public class MenuManager : MonoBehaviour
     {
         characterSelectPanel.SetActive(false);
         mainMenuPanel.SetActive(true);
+    }
+
+
+    public void MainMenu()
+    {
+        SceneManager.LoadScene(0);
     }
 }

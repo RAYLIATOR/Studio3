@@ -783,7 +783,22 @@ MonoBehaviour:
   m_SynchronizeParameters:
   - Type: 9
     SynchronizeType: 0
-    Name: Kick
+    Name: Light1
+  - Type: 9
+    SynchronizeType: 0
+    Name: Light2
+  - Type: 9
+    SynchronizeType: 0
+    Name: Light3
+  - Type: 9
+    SynchronizeType: 0
+    Name: Heavy1
+  - Type: 9
+    SynchronizeType: 0
+    Name: Heavy2
+  - Type: 9
+    SynchronizeType: 0
+    Name: Heavy3
   m_SynchronizeLayers:
   - SynchronizeType: 0
     LayerIndex: 0

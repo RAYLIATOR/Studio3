@@ -4,9 +4,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class NetworkingMain : MonoBehaviourPunCallbacks
 {
+    MenuManager menuManager;
     public InputField userInputField;
     public InputField roomInputField;
     PlayersManager pM;
@@ -15,6 +17,7 @@ public class NetworkingMain : MonoBehaviourPunCallbacks
     void Start()
     {
         PhotonNetwork.AutomaticallySyncScene = true;
+        menuManager = FindObjectOfType<MenuManager>();
         pM = FindObjectOfType<PlayersManager>();
     }
 
@@ -98,6 +101,7 @@ public class NetworkingMain : MonoBehaviourPunCallbacks
     public override void OnPlayerLeftRoom(Player otherPlayer)
     {
         base.OnPlayerLeftRoom(otherPlayer);
+        menuManager.YouWin();
         print(otherPlayer.NickName + " has left the room");
     }
 
@@ -129,5 +133,6 @@ public class NetworkingMain : MonoBehaviourPunCallbacks
     {
         PhotonNetwork.LeaveRoom();
     }
+
 
 }
