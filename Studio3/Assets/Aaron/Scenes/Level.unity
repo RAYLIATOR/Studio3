@@ -1928,7 +1928,8 @@ MonoBehaviour:
   mainMenuPanel: {fileID: 0}
   characterSelectPanel: {fileID: 0}
   pauseMenuPanel: {fileID: 1197276363}
-  youWinPanel: {fileID: 0}
+  youWinPanel: {fileID: 704331339}
+  UI: {fileID: 1688434741}
 --- !u!1 &1611607193
 GameObject:
   m_ObjectHideFlags: 0

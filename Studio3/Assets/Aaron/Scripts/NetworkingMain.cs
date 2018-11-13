@@ -102,6 +102,7 @@ public class NetworkingMain : MonoBehaviourPunCallbacks
     {
         base.OnPlayerLeftRoom(otherPlayer);
         menuManager.YouWin();
+        LeaveRoom();
         print(otherPlayer.NickName + " has left the room");
     }
 
@@ -133,6 +134,4 @@ public class NetworkingMain : MonoBehaviourPunCallbacks
     {
         PhotonNetwork.LeaveRoom();
     }
-
-
 }
