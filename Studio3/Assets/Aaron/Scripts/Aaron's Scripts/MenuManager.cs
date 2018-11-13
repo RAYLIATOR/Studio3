@@ -9,6 +9,7 @@ public class MenuManager : MonoBehaviour
     public GameObject characterSelectPanel;
     public GameObject pauseMenuPanel;
     public GameObject youWinPanel;
+    public GameObject UI;
     int mainMenuScene;
     int levelScene;
     bool paused;
@@ -43,6 +44,7 @@ public class MenuManager : MonoBehaviour
     public void YouWin()
     {
         youWinPanel.SetActive(true);
+        UI.SetActive(false);
     }
 
     void Resume()
