@@ -61,11 +61,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Aaron\Scripts\Instantiator.cs" />
-    <Compile Include="Assets\Aaron\Scripts\MenuManager.cs" />
-    <Compile Include="Assets\Aaron\Scripts\NetworkingMain.cs" />
-    <Compile Include="Assets\Aaron\Scripts\PlayerController.cs" />
-    <Compile Include="Assets\Aaron\Scripts\PlayersManager.cs" />
+    <Compile Include="Assets\Aaron\Scripts\Aaron's Scripts\Instantiator.cs" />
+    <Compile Include="Assets\Aaron\Scripts\Aaron's Scripts\MenuManager.cs" />
+    <Compile Include="Assets\Aaron\Scripts\Aaron's Scripts\NetworkingMain.cs" />
+    <Compile Include="Assets\Aaron\Scripts\Aaron's Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Aaron\Scripts\Aaron's Scripts\PlayersManager.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\Common\EventSystemSpawner.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\Common\OnStartDelete.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\Common\TextButtonTransition.cs" />
