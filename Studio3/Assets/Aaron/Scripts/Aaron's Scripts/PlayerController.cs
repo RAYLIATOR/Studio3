@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour, IPunObservable
     Animator animator;
     PhotonView pv;
     PlayersManager pM;
+    MenuManager menuManager;
     float health;
     float enemyHealth;
     Image myHealthBar;
@@ -22,6 +23,7 @@ public class PlayerController : MonoBehaviour, IPunObservable
 
     void Start ()
     {
+        menuManager = FindObjectOfType<MenuManager>();
         lightLevel = 1;
         heavyLevel = 1;
         //rb = GetComponent<Rigidbody>();
@@ -54,6 +56,10 @@ public class PlayerController : MonoBehaviour, IPunObservable
             Fight();
             //Vector3.ClampMagnitude(rb.velocity, 1);
             myHealthBar.fillAmount = health / 100;
+            if(health <= 0)
+            {
+                menuManager.GameOver();
+            }
         }
         else
         {
@@ -66,10 +72,12 @@ public class PlayerController : MonoBehaviour, IPunObservable
         if(stream.IsWriting)
         {
             stream.Serialize(ref health);
+            stream.Serialize(ref enemyHealth);
         }
         else
         {
              stream.Serialize(ref enemyHealth);
+             stream.Serialize(ref health);
         }
     }
 

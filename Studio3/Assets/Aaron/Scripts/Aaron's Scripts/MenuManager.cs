@@ -9,6 +9,7 @@ public class MenuManager : MonoBehaviour
     public GameObject characterSelectPanel;
     public GameObject pauseMenuPanel;
     public GameObject youWinPanel;
+    public GameObject gameOverPanel;
     public GameObject UI;
     int mainMenuScene;
     int levelScene;
@@ -44,6 +45,12 @@ public class MenuManager : MonoBehaviour
     public void YouWin()
     {
         youWinPanel.SetActive(true);
+        UI.SetActive(false);
+    }
+
+    public void GameOver()
+    {
+        gameObject.SetActive(true);
         UI.SetActive(false);
     }
 

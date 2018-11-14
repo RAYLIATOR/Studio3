@@ -102,7 +102,7 @@ public class NetworkingMain : MonoBehaviourPunCallbacks
     {
         base.OnPlayerLeftRoom(otherPlayer);
         menuManager.YouWin();
-        LeaveRoom();
+        Invoke("LeaveRoom", 1);
         print(otherPlayer.NickName + " has left the room");
     }
 
