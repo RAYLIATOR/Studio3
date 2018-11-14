@@ -116,7 +116,7 @@ GameObject:
   - component: {fileID: 114226285208549060}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -797,7 +797,7 @@ MonoBehaviour:
   - {fileID: 114034272088395450}
   - {fileID: 114226285208549060}
   viewIdField: 0
-  InstantiationId: 2
+  InstantiationId: 1
   isRuntimeInstantiated: 0
 --- !u!114 &114771295047771746
 MonoBehaviour:

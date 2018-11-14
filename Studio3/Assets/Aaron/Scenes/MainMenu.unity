@@ -221,7 +221,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 1.815, y: -0.68}
+  m_AnchoredPosition: {x: 1.8150024, y: -0.6800003}
   m_SizeDelta: {x: -3.63, y: -5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &71846859
@@ -574,7 +574,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0.9850001, y: 1}
-  m_AnchoredPosition: {x: 1.5, y: 0.2725}
+  m_AnchoredPosition: {x: 1.5, y: 0.27249908}
   m_SizeDelta: {x: -17, y: -6.905}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &569723735
@@ -1511,6 +1511,7 @@ MonoBehaviour:
   characterSelectPanel: {fileID: 11303361}
   pauseMenuPanel: {fileID: 0}
   youWinPanel: {fileID: 0}
+  gameOverPanel: {fileID: 0}
   UI: {fileID: 0}
 --- !u!4 &1226287736
 Transform:
@@ -2034,7 +2035,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -3.4049988, y: -0.5}
+  m_AnchoredPosition: {x: -3.4049683, y: -0.5}
   m_SizeDelta: {x: -13.19, y: -8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1933402952

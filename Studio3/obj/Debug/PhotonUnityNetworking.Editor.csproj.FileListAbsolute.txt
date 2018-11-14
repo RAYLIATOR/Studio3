@@ -199,3 +199,5 @@ D:\Studio3 Repository\Studio3\obj\Debug\PhotonUnityNetworking.Editor.csproj.Core
 D:\Studio3 Repository\Studio3\obj\Debug\PhotonUnityNetworking.Editor.csproj.CopyComplete
 D:\Studio3 Repository\Studio3\obj\Debug\PhotonUnityNetworking.Editor.dll
 D:\Studio3 Repository\Studio3\obj\Debug\PhotonUnityNetworking.Editor.pdb
+D:\Studio3 Repository\Studio3\Temp\bin\Debug\Facebook.Unity.Settings.dll
+D:\Studio3 Repository\Studio3\Temp\bin\Debug\UnityEditor.Facebook.Extensions.dll

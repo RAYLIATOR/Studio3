@@ -200,3 +200,5 @@ D:\Studio3 Repository\Studio3\obj\Debug\PhotonUnityNetworking.Utilities.PhotonPl
 D:\Studio3 Repository\Studio3\obj\Debug\PhotonUnityNetworking.Utilities.PhotonPlayer.Editor.csproj.CopyComplete
 D:\Studio3 Repository\Studio3\obj\Debug\PhotonUnityNetworking.Utilities.PhotonPlayer.Editor.dll
 D:\Studio3 Repository\Studio3\obj\Debug\PhotonUnityNetworking.Utilities.PhotonPlayer.Editor.pdb
+D:\Studio3 Repository\Studio3\Temp\bin\Debug\Facebook.Unity.Settings.dll
+D:\Studio3 Repository\Studio3\Temp\bin\Debug\UnityEditor.Facebook.Extensions.dll

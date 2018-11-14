@@ -20,6 +20,8 @@ public class PlayerController : MonoBehaviour, IPunObservable
     float force;
     int lightLevel;
     int heavyLevel;
+    GameObject opponent;
+    PlayerController opponentScript;
 
     void Start ()
     {
@@ -35,17 +37,22 @@ public class PlayerController : MonoBehaviour, IPunObservable
         pM = FindObjectOfType<PlayersManager>();
         if (pM.id == 1)
         {
+            opponent = GameObject.FindGameObjectWithTag("Player 2");
+            opponentScript = opponent.GetComponent<PlayerController>();
             transform.Rotate(0, 90, 0);
             myHealthBar = GameObject.FindGameObjectWithTag("hb1").GetComponent<Image>();
             enemyHealthBar = GameObject.FindGameObjectWithTag("hb2").GetComponent<Image>();
         }
         else if (pM.id == 2)
         {
+            opponent = GameObject.FindGameObjectWithTag("Player");
+            opponentScript = opponent.GetComponent<PlayerController>();
             transform.Rotate(0, -90, 0);
             myHealthBar = GameObject.FindGameObjectWithTag("hb2").GetComponent<Image>();
             enemyHealthBar = GameObject.FindGameObjectWithTag("hb1").GetComponent<Image>();
         }
         health = 100;
+        enemyHealth = 100;
 	}
 	
 	void Update ()
@@ -55,7 +62,7 @@ public class PlayerController : MonoBehaviour, IPunObservable
             MovePlayer();
             Fight();
             //Vector3.ClampMagnitude(rb.velocity, 1);
-            myHealthBar.fillAmount = health / 100;
+            print(myHealthBar.fillAmount);
             if(health <= 0)
             {
                 menuManager.GameOver();
@@ -63,21 +70,23 @@ public class PlayerController : MonoBehaviour, IPunObservable
         }
         else
         {
-            enemyHealthBar.fillAmount = enemyHealth / 100;
-        } 
-	}
+            //enemyHealthBar.fillAmount = enemyHealth / 100;
+        }
+        myHealthBar.fillAmount = health / 100;
+        enemyHealthBar.fillAmount = enemyHealth / 100;
+
+        print(enemyHealth);
+    }
 
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
     {
         if(stream.IsWriting)
         {
             stream.Serialize(ref health);
-            stream.Serialize(ref enemyHealth);
         }
         else
         {
              stream.Serialize(ref enemyHealth);
-             stream.Serialize(ref health);
         }
     }
 
@@ -93,6 +102,11 @@ public class PlayerController : MonoBehaviour, IPunObservable
         }
     }
 
+    public void TakeDamage(float damage)
+    {
+        health -= damage;
+    }
+
     void Fight()
     {
         if (Input.GetKeyDown(KeyCode.UpArrow))
@@ -100,17 +114,17 @@ public class PlayerController : MonoBehaviour, IPunObservable
             if (heavyLevel == 1)
             {
                 animator.SetTrigger("Heavy1");
-                enemyHealth -= 10;
+                opponentScript.TakeDamage(10);
             }
             else if (heavyLevel == 2)
             {
                 animator.SetTrigger("Heavy2");
-                enemyHealth -= 10;
+                opponentScript.TakeDamage(10);
             }
             else if (heavyLevel == 3)
             {
                 animator.SetTrigger("Heavy3");
-                enemyHealth -= 10;
+                opponentScript.TakeDamage(10);
             }
             if (heavyLevel < 3)
             {
@@ -126,17 +140,17 @@ public class PlayerController : MonoBehaviour, IPunObservable
             if (lightLevel == 1)
             {
                 animator.SetTrigger("Light1");
-                enemyHealth -= 5;
+                opponentScript.TakeDamage(5);
             }
             else if (lightLevel == 2)
             {
                 animator.SetTrigger("Light2");
-                enemyHealth -= 5;
+                opponentScript.TakeDamage(5);
             }
             else if (lightLevel == 3)
             {
                 animator.SetTrigger("Light3");
-                enemyHealth -= 5;
+                opponentScript.TakeDamage(5);
             }
             if (lightLevel < 3)
             {

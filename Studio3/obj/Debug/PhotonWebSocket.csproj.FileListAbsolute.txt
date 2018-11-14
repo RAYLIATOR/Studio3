@@ -63,7 +63,6 @@ D:\Studio3 Repository\Studio3\Temp\bin\Debug\UnityEngine.ProfilerModule.dll
 D:\Studio3 Repository\Studio3\Temp\bin\Debug\UnityEngine.ScreenCaptureModule.dll
 D:\Studio3 Repository\Studio3\Temp\bin\Debug\UnityEngine.SharedInternalsModule.dll
 D:\Studio3 Repository\Studio3\Temp\bin\Debug\UnityEngine.SpatialTracking.dll
-D:\Studio3 Repository\Studio3\Temp\bin\Debug\UnityEngine.SpatialTrackingModule.dll
 D:\Studio3 Repository\Studio3\Temp\bin\Debug\UnityEngine.SpriteMaskModule.dll
 D:\Studio3 Repository\Studio3\Temp\bin\Debug\UnityEngine.SpriteShapeModule.dll
 D:\Studio3 Repository\Studio3\Temp\bin\Debug\UnityEngine.StandardEvents.dll
@@ -145,7 +144,6 @@ D:\Studio3 Repository\Studio3\Temp\bin\Debug\UnityEngine.Physics2DModule.xml
 D:\Studio3 Repository\Studio3\Temp\bin\Debug\UnityEngine.ProfilerModule.xml
 D:\Studio3 Repository\Studio3\Temp\bin\Debug\UnityEngine.ScreenCaptureModule.xml
 D:\Studio3 Repository\Studio3\Temp\bin\Debug\UnityEngine.SharedInternalsModule.xml
-D:\Studio3 Repository\Studio3\Temp\bin\Debug\UnityEngine.SpatialTrackingModule.xml
 D:\Studio3 Repository\Studio3\Temp\bin\Debug\UnityEngine.SpriteMaskModule.xml
 D:\Studio3 Repository\Studio3\Temp\bin\Debug\UnityEngine.SpriteShapeModule.xml
 D:\Studio3 Repository\Studio3\Temp\bin\Debug\UnityEngine.StreamingModule.xml
@@ -197,3 +195,5 @@ D:\Studio3 Repository\Studio3\obj\Debug\PhotonWebSocket.csproj.CoreCompileInputs
 D:\Studio3 Repository\Studio3\obj\Debug\PhotonWebSocket.csproj.CopyComplete
 D:\Studio3 Repository\Studio3\obj\Debug\PhotonWebSocket.dll
 D:\Studio3 Repository\Studio3\obj\Debug\PhotonWebSocket.pdb
+D:\Studio3 Repository\Studio3\Temp\bin\Debug\Facebook.Unity.Settings.dll
+D:\Studio3 Repository\Studio3\Temp\bin\Debug\UnityEditor.Facebook.Extensions.dll
