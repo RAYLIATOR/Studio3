@@ -50,7 +50,7 @@ public class MenuManager : MonoBehaviour
 
     public void GameOver()
     {
-        gameObject.SetActive(true);
+        gameOverPanel.SetActive(true);
         UI.SetActive(false);
     }
 
