@@ -1,4 +1,16 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Ajay Test.unity
+=======
+<<<<<<< HEAD
+- path: Assets/Aaron/Scenes/Level.unity
+=======
+<<<<<<< HEAD
+- path: Assets/Ajay/Scenes/Ajay Test.unity
+=======
+- path: Assets/Aaron/Scenes/MainMenu.unity
+>>>>>>> e281ac313cc8677f90cb60cc52e9f3365f1f088f
+>>>>>>> 5c18bdbd44284e8a0d71d57299feeeb7df79b98f
+>>>>>>> 82e07217bf7fa13f5160311a471c166ccb9fc7a0
   isLoaded: 1
   isActive: 1
