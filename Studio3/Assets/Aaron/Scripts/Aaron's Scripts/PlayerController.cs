@@ -64,27 +64,16 @@ public class PlayerController : MonoBehaviour, IPunObservable
             //Vector3.ClampMagnitude(rb.velocity, 1);
             print(myHealthBar.fillAmount);
             enemyHealthBar.fillAmount = health / 100;
-            print("health = " + health);
-
+            if(health <= 0)
+            {
+                menuManager.GameOver();
+            }
         }
         else
         {
             myHealthBar.fillAmount = health / 100;
-            //pv.
-            // print(pv. + health);            
         }
-        if (health <= 0)
-        {
-            print("gameoverrrrr");
-            if (pv.IsMine)
-            {
-                menuManager.GameOver();
-            }
-            else
-            {
-                menuManager.YouWin();
-            }
-        }
+        
         //enemyHealthBar.fillAmount = enemyHealth / 100;
 
         //print(enemyHealth);
