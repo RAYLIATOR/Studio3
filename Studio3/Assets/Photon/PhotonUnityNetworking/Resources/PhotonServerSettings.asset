@@ -32,4 +32,5 @@ MonoBehaviour:
   - Fire
   - RespawnSpaceship
   - StopWaiting
+  - GameOver
   DisableAutoOpenWizard: 1
