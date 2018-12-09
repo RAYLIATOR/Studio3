@@ -9,5 +9,9 @@ EditorBuildSettings:
     path: Assets/Aaron/Scenes/MainMenu.unity
     guid: 4d3b8191988835e40a265bcd0347e665
   - enabled: 1
-    path: Assets/Aaron/Scenes/Level.unity
+    path: Assets/Aaron/Scenes/OnlineLevel.unity
     guid: a9081284236adc944a93d3055a830067
+  - enabled: 1
+    path: Assets/Aaron/Scenes/OfflineLevel.unity
+    guid: 1320df72f33265b4982f1f45f924d8d4
+  m_configObjects: {}

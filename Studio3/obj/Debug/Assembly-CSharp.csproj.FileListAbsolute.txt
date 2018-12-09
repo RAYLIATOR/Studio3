@@ -182,3 +182,5 @@ D:\Studio3 Repository\Studio3\obj\Debug\Assembly-CSharp.dll
 D:\Studio3 Repository\Studio3\obj\Debug\Assembly-CSharp.pdb
 D:\Studio3 Repository\Studio3\Temp\bin\Debug\UnityEditor.StandardEvents.dll
 D:\Studio3 Repository\Studio3\Temp\bin\Debug\Facebook.Unity.Settings.dll
+D:\Studio3 Repository\Studio3\Temp\bin\Debug\UnityEngine.SpatialTrackingModule.dll
+D:\Studio3 Repository\Studio3\Temp\bin\Debug\UnityEngine.SpatialTrackingModule.xml
