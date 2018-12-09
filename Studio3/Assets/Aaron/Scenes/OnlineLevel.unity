@@ -1441,8 +1441,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   victoryPanel: {fileID: 0}
   waitingPanel: {fileID: 1840506930}
-  bluePlayer: {fileID: 1384785880726594, guid: f937b8aeaedd5d048960043d5a873b00, type: 2}
-  redPlayer: {fileID: 1929455375288148, guid: 2411c1b14386ce64691efa65fe2cae0b, type: 2}
+  bluePlayerOnline: {fileID: 1384785880726594, guid: f937b8aeaedd5d048960043d5a873b00,
+    type: 2}
+  redPlayerOnline: {fileID: 1929455375288148, guid: 2411c1b14386ce64691efa65fe2cae0b,
+    type: 2}
+  bluePlayerOffline: {fileID: 0}
+  redPlayerOffline: {fileID: 0}
+  greenPlayerOffline: {fileID: 0}
+  yellowPlayerOffline: {fileID: 0}
+  player1: {fileID: 0}
+  player2: {fileID: 0}
 --- !u!114 &1046769054
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2125,12 +2133,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d30fc5787c4780c479029a460bc1fe91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  winnerName: {fileID: 0}
   mainMenuPanel: {fileID: 0}
   characterSelectPanel: {fileID: 0}
   pauseMenuPanel: {fileID: 1197276363}
   youWinPanel: {fileID: 704331339}
   gameOverPanel: {fileID: 1793256326}
+  modeSelectPanel: {fileID: 0}
   UI: {fileID: 1688434741}
+  selectPlayer1: {fileID: 0}
+  selectPlayer2: {fileID: 0}
+  offlineVictoryPanel: {fileID: 0}
 --- !u!114 &1561758512
 MonoBehaviour:
   m_ObjectHideFlags: 0

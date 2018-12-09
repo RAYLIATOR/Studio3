@@ -197,4 +197,7 @@ D:\Studio3 Repository\Studio3\obj\Debug\PhotonUnityNetworking.csproj.CopyComplet
 D:\Studio3 Repository\Studio3\obj\Debug\PhotonUnityNetworking.dll
 D:\Studio3 Repository\Studio3\obj\Debug\PhotonUnityNetworking.pdb
 D:\Studio3 Repository\Studio3\Temp\bin\Debug\Facebook.Unity.Settings.dll
-D:\Studio3 Repository\Studio3\Temp\bin\Debug\UnityEditor.Facebook.Extensions.dll
+D:\Studio3 Repository\Studio3\Temp\bin\Debug\UnityEditor.iOS.Extensions.dll
+D:\Studio3 Repository\Studio3\Temp\bin\Debug\UnityEngine.SpatialTrackingModule.dll
+D:\Studio3 Repository\Studio3\Temp\bin\Debug\UnityEditor.iOS.Extensions.Common.dll
+D:\Studio3 Repository\Studio3\Temp\bin\Debug\UnityEngine.SpatialTrackingModule.xml
