@@ -813,6 +813,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6024425f184ffcf48acb37463b0c30a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  opponent: {fileID: 0}
   twoPlayersConnected: 0
 --- !u!137 &137520880812498310
 SkinnedMeshRenderer:
