@@ -14,7 +14,15 @@ public class NetworkingMain : MonoBehaviourPunCallbacks
     PlayersManager pM;
     string roomName;
 
+    void Awake()
+    {
+        DontDestroyOnLoad(this);
 
+        if (FindObjectsOfType(GetType()).Length > 1)
+        {
+            Destroy(gameObject);
+        }
+    }
 
     void Start()
     {
@@ -25,8 +33,8 @@ public class NetworkingMain : MonoBehaviourPunCallbacks
 
     void Update()
     {
-        if(PhotonNetwork.CurrentRoom != null)
-            print("player Count" + PhotonNetwork.CurrentRoom.PlayerCount);
+        //if(PhotonNetwork.CurrentRoom != null)
+            //print("player Count" + PhotonNetwork.CurrentRoom.PlayerCount);
     }
     
     public void SelectPlayer1()
@@ -42,7 +50,8 @@ public class NetworkingMain : MonoBehaviourPunCallbacks
     public override void OnConnectedToMaster()
     {
         Debug.Log("Successfully connected to server.");
-        PhotonNetwork.JoinRoom("555");
+        PhotonNetwork.CreateRoom(roomInputField.text);
+        //PhotonNetwork.JoinRandomRoom(null, 0);
     }
 
     public override void OnJoinRandomFailed(short returnCode, string message)
@@ -57,16 +66,19 @@ public class NetworkingMain : MonoBehaviourPunCallbacks
         typedLobby.Type = LobbyType.Default;
 
         roomName = roomInputField.text;
-        PhotonNetwork.CreateRoom(roomName, roomOptions, typedLobby);
-        }
+        PhotonNetwork.CreateRoom(roomName, roomOptions);
+    }
+
     public override void OnJoinRoomFailed(short returnCode, string message)
     {
-        print(message);
+        base.OnJoinRoomFailed(returnCode, message);
+        print("error: "+message);
     }
+
     public override void OnCreateRoomFailed(short returnCode, string message)
     {
         base.OnCreateRoomFailed(returnCode, message);
-        PhotonNetwork.JoinRoom("555");
+        PhotonNetwork.JoinRoom(roomInputField.text);
 
     }
 
@@ -85,20 +97,22 @@ public class NetworkingMain : MonoBehaviourPunCallbacks
     public override void OnJoinedRoom()
     {
         base.OnJoinedRoom();
-        print(PhotonNetwork.LocalPlayer.NickName + " has joined the room");
-print("?" + PhotonNetwork.CurrentRoom.Name);
-       if (PhotonNetwork.CurrentRoom.PlayerCount == 1)
+        //print(PhotonNetwork.LocalPlayer.NickName + " has joined the room");
+        //print("room name" + PhotonNetwork.CurrentRoom.Name);
+
+       if (PhotonNetwork.IsMasterClient)
         {
             pM.onlineID = 1;
             PhotonNetwork.LoadLevel(1);
+            Instantiator instantiator = FindObjectOfType<Instantiator>();
+            instantiator.Instatiation();
         }
-        if (PhotonNetwork.CurrentRoom.PlayerCount == 2)
+        else
         {
             pM.onlineID = 2;
             PhotonNetwork.LoadLevel(1);
             Instantiator instantiator = FindObjectOfType<Instantiator>();
-            instantiator.player1.GetComponent<PlayerController>().Init();
-            instantiator.player2.GetComponent<PlayerController>().Init();
+            instantiator.Instatiation();
         }
     }
 
@@ -136,7 +150,7 @@ print("?" + PhotonNetwork.CurrentRoom.Name);
 
     public void ConnectToServer()
     {
-        PhotonNetwork.NickName = userInputField.text;
+        PhotonNetwork.NickName = "LOLOL";
         PhotonNetwork.ConnectUsingSettings();
     }
 

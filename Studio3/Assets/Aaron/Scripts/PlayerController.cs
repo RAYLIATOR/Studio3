@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour, IPunObservable
     float force;
     int lightLevel;
     int heavyLevel;
-    GameObject opponent;
+    public GameObject opponent;
     PlayerController opponentScript;
     Instantiator instantiator;
     public bool twoPlayersConnected;
@@ -37,13 +37,18 @@ public class PlayerController : MonoBehaviour, IPunObservable
         minX = -3.5f;
         maxX = 3.5f;
         pv = GetComponent<PhotonView>();
-        pM = FindObjectOfType<PlayersManager>();
+        
         health = 100;
         //enemyHealth = 100;
 	}
 	
     public void Init()
     {
+        pM = FindObjectOfType<PlayersManager>();
+        if(pM == null)
+        {
+            print("pm is null");
+        }
         if (pM.onlineID == 1)
         {
             opponent = instantiator.player2;

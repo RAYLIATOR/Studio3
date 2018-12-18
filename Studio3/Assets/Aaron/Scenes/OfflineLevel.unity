@@ -10561,6 +10561,8 @@ MonoBehaviour:
     type: 2}
   yellowPlayerOffline: {fileID: 1384785880726594, guid: 6fabeb33f3c58ec46867e21f038f3233,
     type: 2}
+  player1: {fileID: 0}
+  player2: {fileID: 0}
 --- !u!114 &1046769054
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10736,7 +10738,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.12919298, y: 0.5}
   m_AnchorMax: {x: 0.8706316, y: 0.74973685}
-  m_AnchoredPosition: {x: 0, y: -0.3500061}
+  m_AnchoredPosition: {x: 0, y: -0.3499756}
   m_SizeDelta: {x: -5.300049, y: -0.7000122}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1113674549

@@ -6,7 +6,7 @@ using UnityEngine;
 public class Instantiator : MonoBehaviourPun, IPunObservable
 {
     public GameObject victoryPanel;
-    public GameObject waitingPanel;
+    GameObject waitingPanel;
     public GameObject bluePlayerOnline;
     public GameObject redPlayerOnline;
     public GameObject bluePlayerOffline;
@@ -22,10 +22,11 @@ public class Instantiator : MonoBehaviourPun, IPunObservable
     [PunRPC]
     void StopWaiting()
     {
+        waitingPanel = GameObject.FindGameObjectWithTag("waiting");
         waitingPanel.SetActive(false);
     }
 
-    void Start()
+    public void Instatiation()
     {
         pv = GetComponent<PhotonView>();
         pM = FindObjectOfType<PlayersManager>();
@@ -61,10 +62,14 @@ public class Instantiator : MonoBehaviourPun, IPunObservable
                 if (pM.onlineColor == 1)
                 {
                     player2 = PhotonNetwork.Instantiate(bluePlayerOnline.name, new Vector3(2, 0, -6.5f), Quaternion.identity);
+                    player2.GetComponent<PlayerController>().Init();
+                    player1.GetComponent<PlayerController>().Init();
                 }
                 else if (pM.onlineColor == 2)
                 {
                     player2 = PhotonNetwork.Instantiate(redPlayerOnline.name, new Vector3(2, 0, -6.5f), Quaternion.identity);
+                    player2.GetComponent<PlayerController>().Init();
+                    player1.GetComponent<PlayerController>().Init();
                 }
                 else
                 {
@@ -72,10 +77,14 @@ public class Instantiator : MonoBehaviourPun, IPunObservable
                     if (i == 1)
                     {
                         player2 = PhotonNetwork.Instantiate(bluePlayerOnline.name, new Vector3(2, 0, -6.5f), Quaternion.identity);
+                        player2.GetComponent<PlayerController>().Init();
+                        player1.GetComponent<PlayerController>().Init();
                     }
                     else if (i == 2)
                     {
                         player2 = PhotonNetwork.Instantiate(redPlayerOnline.name, new Vector3(2, 0, -6.5f), Quaternion.identity);
+                        player2.GetComponent<PlayerController>().Init();
+                        player1.GetComponent<PlayerController>().Init();
                     }
                 }
             }
