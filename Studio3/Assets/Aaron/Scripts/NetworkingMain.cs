@@ -14,15 +14,7 @@ public class NetworkingMain : MonoBehaviourPunCallbacks
     PlayersManager pM;
     string roomName;
 
-    void Awake()
-    {
-        DontDestroyOnLoad(this);
 
-        if (FindObjectsOfType(GetType()).Length > 1)
-        {
-            Destroy(gameObject);
-        }
-    }
 
     void Start()
     {
@@ -50,7 +42,7 @@ public class NetworkingMain : MonoBehaviourPunCallbacks
     public override void OnConnectedToMaster()
     {
         Debug.Log("Successfully connected to server.");
-        PhotonNetwork.JoinRandomRoom(null, 0);
+        PhotonNetwork.JoinRoom("555");
     }
 
     public override void OnJoinRandomFailed(short returnCode, string message)
@@ -66,12 +58,15 @@ public class NetworkingMain : MonoBehaviourPunCallbacks
 
         roomName = roomInputField.text;
         PhotonNetwork.CreateRoom(roomName, roomOptions, typedLobby);
+        }
+    public override void OnJoinRoomFailed(short returnCode, string message)
+    {
+        print(message);
     }
-
     public override void OnCreateRoomFailed(short returnCode, string message)
     {
         base.OnCreateRoomFailed(returnCode, message);
-        PhotonNetwork.JoinRoom(roomName);
+        PhotonNetwork.JoinRoom("555");
 
     }
 
@@ -91,7 +86,7 @@ public class NetworkingMain : MonoBehaviourPunCallbacks
     {
         base.OnJoinedRoom();
         print(PhotonNetwork.LocalPlayer.NickName + " has joined the room");
-
+print("?" + PhotonNetwork.CurrentRoom.Name);
        if (PhotonNetwork.CurrentRoom.PlayerCount == 1)
         {
             pM.onlineID = 1;
