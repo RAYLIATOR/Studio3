@@ -11,13 +11,13 @@ public class MenuManager : MonoBehaviour
     public GameObject mainMenuPanel;
     public GameObject characterSelectPanel;
     public GameObject pauseMenuPanel;
-    public GameObject youWinPanel;
     public GameObject gameOverPanel;
     public GameObject modeSelectPanel;
     public GameObject UI;
     public GameObject selectPlayer1;
     public GameObject selectPlayer2;
-    public GameObject offlineVictoryPanel;
+    public GameObject p1WinsPanel;
+    public GameObject p2WinsPanel;
     int mainMenuScene;
     int levelScene;
     bool paused;
@@ -50,14 +50,18 @@ public class MenuManager : MonoBehaviour
     {
         pauseMenuPanel.SetActive(true);
     }
-
-    public void YouWin()
+    public void P1Wins()
     {
-        youWinPanel.SetActive(true);
+        p1WinsPanel.SetActive(true);
+        UI.SetActive(false);
+    }
+    public void P2Wins()
+    {
+        p2WinsPanel.SetActive(true);
         UI.SetActive(false);
     }
 
-    public void GameOver()
+     public void GameOver()
     {
         gameOverPanel.SetActive(true);
         UI.SetActive(false);
@@ -72,13 +76,6 @@ public class MenuManager : MonoBehaviour
     {
 
     }      
-
-    public void OfflineVictoryScreen(string winner)
-    {
-        UI.SetActive(false);
-        offlineVictoryPanel.SetActive(true);
-        winnerName.text = winner + " wins!";
-    }
 
     public void ExitApplication()
     {

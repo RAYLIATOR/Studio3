@@ -1,0 +1,227 @@
+fileFormatVersion: 2
+guid: 65671a04469166f48bb740da2176f5b4
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Backpack
+    100002: Bag_001
+    100004: BagPart_001
+    100006: Belt_001
+    100008: Body_001
+    100010: Box005
+    100012: CATRigChest
+    100014: CATRigHead
+    100016: CATRigLArm1
+    100018: CATRigLArm2
+    100020: CATRigLArmCollarbone
+    100022: CATRigLArmPalm
+    100024: CATRigLLeg1
+    100026: CATRigLLeg2
+    100028: CATRigLLegAnkle
+    100030: CATRigLLegPlatform
+    100032: CATRigLLegPlatform 1
+    100034: CATRigPelvis
+    100036: CATRigRArm1
+    100038: CATRigRArm2
+    100040: CATRigRArmCollarbone
+    100042: CATRigRArmPalm
+    100044: CATRigRLeg1
+    100046: CATRigRLeg2
+    100048: CATRigRLegAnkle
+    100050: CATRigRLegPlatform
+    100052: CATRigRLegPlatform 1
+    100054: CATRigSpine
+    100056: CATRigSpine1
+    100058: CATRigSpine2
+    100060: CATRigSpine3
+    100062: CATRigSpine4
+    100064: CATRigSpine5
+    100066: Character 1
+    100068: Character 1 Stand
+    100070: //RootNode
+    100072: Forearm_001
+    100074: Forearm_002
+    100076: Hands_001
+    100078: Hands_002
+    100080: Head_001
+    100082: Helmet
+    100084: Leg_001
+    100086: Leg_002
+    100088: Plane001
+    400000: Backpack
+    400002: Bag_001
+    400004: BagPart_001
+    400006: Belt_001
+    400008: Body_001
+    400010: Box005
+    400012: CATRigChest
+    400014: CATRigHead
+    400016: CATRigLArm1
+    400018: CATRigLArm2
+    400020: CATRigLArmCollarbone
+    400022: CATRigLArmPalm
+    400024: CATRigLLeg1
+    400026: CATRigLLeg2
+    400028: CATRigLLegAnkle
+    400030: CATRigLLegPlatform
+    400032: CATRigLLegPlatform 1
+    400034: CATRigPelvis
+    400036: CATRigRArm1
+    400038: CATRigRArm2
+    400040: CATRigRArmCollarbone
+    400042: CATRigRArmPalm
+    400044: CATRigRLeg1
+    400046: CATRigRLeg2
+    400048: CATRigRLegAnkle
+    400050: CATRigRLegPlatform
+    400052: CATRigRLegPlatform 1
+    400054: CATRigSpine
+    400056: CATRigSpine1
+    400058: CATRigSpine2
+    400060: CATRigSpine3
+    400062: CATRigSpine4
+    400064: CATRigSpine5
+    400066: Character 1
+    400068: Character 1 Stand
+    400070: //RootNode
+    400072: Forearm_001
+    400074: Forearm_002
+    400076: Hands_001
+    400078: Hands_002
+    400080: Head_001
+    400082: Helmet
+    400084: Leg_001
+    400086: Leg_002
+    400088: Plane001
+    2100000: 'Material #25'
+    2100002: 'Material #414'
+    2100004: 'Material #437'
+    2100006: 'Material #438'
+    2100008: 'Material #439'
+    2100010: 'Material #440'
+    2100012: 'Material #441'
+    2100014: 'Material #442'
+    2100016: No Name
+    2300000: Bag_001
+    2300002: BagPart_001
+    2300004: Belt_001
+    2300006: Body_001
+    2300008: Box005
+    2300010: Forearm_001
+    2300012: Forearm_002
+    2300014: Hands_001
+    2300016: Hands_002
+    2300018: Helmet
+    2300020: Leg_001
+    2300022: Leg_002
+    2300024: Plane001
+    3300000: Bag_001
+    3300002: BagPart_001
+    3300004: Belt_001
+    3300006: Body_001
+    3300008: Box005
+    3300010: Forearm_001
+    3300012: Forearm_002
+    3300014: Hands_001
+    3300016: Hands_002
+    3300018: Helmet
+    3300020: Leg_001
+    3300022: Leg_002
+    3300024: Plane001
+    4300000: Plane001
+    4300002: Bag_001
+    4300004: BagPart_001
+    4300006: Belt_001
+    4300008: Forearm_002
+    4300010: Forearm_001
+    4300012: Body_001
+    4300014: Leg_002
+    4300016: Leg_001
+    4300018: Box005
+    4300020: Helmet
+    4300022: Hands_001
+    4300024: Hands_002
+    7400000: Take 001
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
